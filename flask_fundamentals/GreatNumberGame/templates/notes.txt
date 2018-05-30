@@ -1,0 +1,13 @@
+-figure out how to generate a random number.
+    -number should stick around until we guess it (store it in session).
+-routing
+    -root route ('/') to display the landing page
+    -submit route ('/submit') [POST] to compare submitted number to random number
+    -reset route ('/reset') to reset session, start again
+-template 
+    - index.html
+    - leverage python to write if statements
+
+
+
+

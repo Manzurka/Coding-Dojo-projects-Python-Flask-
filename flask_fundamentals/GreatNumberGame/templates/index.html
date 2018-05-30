@@ -1,0 +1,54 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Great Number Game</title>
+</head>
+<style>
+    body{
+        text-align:center;
+    }
+    div{
+     width:300px;
+     margin-left:500px;
+     background:red;
+     text-align: center;
+     padding:20px;
+     color:white;
+    }
+    #correct{
+        background: green;
+    }
+    #blank{
+        background: purple;
+    }
+</style>
+<body>
+
+    <h1>Welcome to the Great Number Game!</h1>
+    <h2>I am thinking of a number between 1 and 100</h2>
+    <h2>Take a guess!</h2>
+    <form action='/submit' method='post'>
+    <input name="number" type="text">
+    <input type="submit" value="Submit">
+    </form>
+    
+    {% if number == randomNum %}
+        <div id="correct">  
+        <h2>{{number}} was the number!!</h2>
+        <form action="/reset">
+        <button>Play again</button>
+        </form>
+        </div>  
+    {% elif number> randomNum %}
+        <div>
+        <h2>Too high!</h2>
+        </div>
+    {% elif number< randomNum %}
+        <div>
+        <h2>Too low!</h2>
+        </div>
+    <!-- {% else %}
+        <div id="blank"></div> -->
+    {% endif %}
+</body>
+</html>

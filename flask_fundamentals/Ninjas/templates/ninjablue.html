@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ninja</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheet.css')}}">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" 
+         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" 
+         crossorigin="anonymous"></script>
+
+    <script type='text/javascript' src='{{ url_for('static', filename='javascript.js')}}'>
+    </script> -->
+</head>
+<style>
+    /* img {
+        visibility:hidden;
+    } */
+</style>
+<body>
+    <!-- {% if color == blue %} -->
+    <img name="blue" src=" {{url_for('static', filename='leonardo.jpg')}}" alt="Blue ninja"/>
+    <!-- {% elif color == orange %}
+    <img name="orange" src=" {{url_for('static', filename='michelangelo.jpg')}}" alt="Orange ninja">
+    {% elif color == purple %}
+    <img name="purple" src=" {{url_for('static', filename='donatello.jpg')}}" alt="Purple ninja">
+    {% elif color == red %}
+    <img name="red" src=" {{url_for('static', filename='raphael.jpg')}}" alt="Red ninja">
+    {% else %}
+    <img name="none" src=" {{url_for('static', filename='notapril.jpg')}}" alt="No ninja">
+    {% endif %} -->
+</body>
+</html>

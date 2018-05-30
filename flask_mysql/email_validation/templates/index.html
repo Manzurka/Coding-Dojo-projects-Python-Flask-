@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>Email Validation</title>
+  <style>
+    body {
+        width: 350px;
+    }
+  </style>
+</head>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    {% for message in messages %}
+         <!-- {% if message=="Invalid Email Address!"%} -->
+            <p style="background-color:red; text-align:center; color:white;" >{{message}}</p>
+         <!-- {% else:%}
+            <p style="background-color:green; text-align:center;" >{{message}}</p>
+         {% endif %} -->
+    {% endfor %}
+{% endif %}
+{% endwith %}
+<body>
+    <form action="/emails" method="post">
+        <label for="email">Email:<input type="text" name="email" id="email"></label>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

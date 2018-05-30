@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>Success Page</title>
+  <style>
+    body {
+        width: 350px;
+    }
+  </style>
+  </head>
+  <body>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                    <p style="background-color:green; text-align:center;" >{{message}}</p>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <div>
+            <h3><u>Email addresses entered:</u></h3>
+            {% for email in all_emails: %}
+                <p>{{ email['email'] }} {{ email['created_at'] }}</p>
+            {%endfor%}
+            <form action="/delete" method="post">
+                <label for="email">Email:<input type="text" name="email" id="email"></label>
+                <input type="submit" value="Delete">
+            </form>
+        </div>
+  </body>

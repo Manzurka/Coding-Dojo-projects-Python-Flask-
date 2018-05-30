@@ -1,0 +1,50 @@
+<html>
+    <head>
+         <meta charset="utf-8">
+         <title>Registration Form</title>
+         <meta name="description" content="This is the registration form to gather data about potential students interesed in programming languages!" >
+   </head>
+    <body>
+        <form action='/submit' method='post'>    
+            <h1><strong>Registration Form</strong></h1>
+        <div class="basicInfo" >
+             <label>
+                First Name: <input type="text" name="firstName" placeholder="Enter your name" style="margin-left: 49px;">
+             </label>
+         </div>
+         <div>
+             <br>
+             <label>
+                Last Name: <input type="text" name="lastName"  placeholder="Enter your last name" style="margin-left: 50px;">
+             </label>
+        </div>
+        <div>
+            <br>
+             <label>
+                Email: <input type="email" name="email"  placeholder="Enter your email address" style="margin-left: 80px;">
+            </label>
+         </div>
+         <div>
+             <br>
+            <label>
+                Password: <input type="password" name="password"  placeholder="Create 8 digit password" style="margin-left: 57px;" >
+            </label>
+        </div>
+         <div>
+             <br>
+             <label>
+                PW Confirmation: <input type="password" name="pw_confirmation"  placeholder="Re-enter your password" style="margin-left: 5px;">
+             </label>
+         </div>
+         <input type="submit" value="Submit" style="margin:20px 20px 20px 200px;">
+         </form>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                     <p style="color:red;" >{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+         </body>
+         </html>
+         
